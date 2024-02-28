@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  box-shadow: 3px 3px 10px black;
+  &__text {
+    margin: 0 2em;
+    color: rgb(28, 131, 142);
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width:700px){
+    .header{
+        flex-direction: row;
+        &__text{
+            font-size: 2.5em;
+        }
+    }
+}
