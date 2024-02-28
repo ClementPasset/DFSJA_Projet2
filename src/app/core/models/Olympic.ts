@@ -1,4 +1,5 @@
-// TODO: create here a typescript interface for an olympic country
+import { Participations } from "./Participation";
+
 /*
 example of an olympic country:
 {
@@ -7,3 +8,8 @@ example of an olympic country:
     participations: []
 }
 */
+export class OlympicCountries {
+    id!: number;
+    country!: string;
+    participations!: Participations[];
+}
