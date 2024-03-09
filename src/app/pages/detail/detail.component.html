@@ -1,0 +1,22 @@
+<h2 class="dashboard__title">Details</h2>
+<section *ngIf="olympic$ | async as olympic" class="dashboard__graph">
+    <h3 class="dashboard__graph_title">{{olympic.country}}</h3>
+    <div class="dashboard__graph_counters">
+        <div class="dashboard__graph_counter">
+            <p class="dashboard__graph_counter_title">Number of entries</p>
+            <p class="dashboard__graph_counter_number">{{entriesCount}}</p>
+        </div>
+        <div class="dashboard__graph_counter">
+            <p class="dashboard__graph_counter_title">Total number medals</p>
+            <p class="dashboard__graph_counter_number">{{medalsCount}}</p>
+        </div>
+        <div class="dashboard__graph_counter">
+            <p class="dashboard__graph_counter_title">Total number of athletes</p>
+            <p class="dashboard__graph_counter_number">{{athletesCount}}</p>
+        </div>
+    </div>
+    <div>
+        <ngx-charts-line-chart [results]="graphData$ | async" [autoScale]="autoScale" [xAxis]="xAxis" [yAxis]="yAxis" [showXAxisLabel]="showXAxisLabel" [xAxisLabel]="xAxisLabel"></ngx-charts-line-chart>
+    </div>
+</section>
+<a class="dashboard__link" routerLink="">⬅ Go back to the dashboard !</a>

@@ -1,3 +1,6 @@
+a{
+    cursor: pointer;
+}
 .dashboard{
     &__title{
         text-align: center;
@@ -25,6 +28,7 @@
             width: 40%;
             border: 2px solid rgb(28,131,142);
             border-radius: .4em;
+            margin: 10px;
             &_title{
                 color: grey;
             }
@@ -35,18 +39,21 @@
 
         &_counters{
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
             p{
                 text-align: center;
             }
             margin: 10px 0;
         }
-        &_label{
-            width: 150px;
-            p{
-                font-size: 1.5em;
-            }
-        }
+    }
+    &__link{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin: 25px 0;
+        text-decoration: none;
+        color: inherit;
     }
 }
 
@@ -60,6 +67,9 @@ h3, p{
             margin: 10px auto;
             max-width: 80%;
         }
+        &__graph_counter{
+            width: 60%;
+        }
     }
 }
 
@@ -69,7 +79,10 @@ h3, p{
             max-width: 60%;
         }
         &__graph{
-            max-width: 40%;
+            max-width: 60%;
+        }
+        &__graph_counters{
+            flex-direction:row;
         }
     }
 }
