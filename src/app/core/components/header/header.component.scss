@@ -5,6 +5,12 @@
   align-items: center;
   padding: 10px 0;
   box-shadow: 3px 3px 10px black;
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 125;
+  background-color: white;
   &__text {
     margin: 0 2em;
     color: rgb(28, 131, 142);
