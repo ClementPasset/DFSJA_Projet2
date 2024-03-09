@@ -1,0 +1,75 @@
+.dashboard{
+    &__title{
+        text-align: center;
+        margin: 15px 0;
+        text-transform: uppercase;
+    }
+    &__text, &__graph{
+        margin: 15px;
+        text-align: justify;
+    }
+    &__graph{
+        margin: 20px 0;
+        padding: 20px 0;
+        &_title{
+            background-color: rgb(28,131,142);
+            color: white;
+            width: 70%;
+            border-radius: .2em;
+            text-align: center;
+            padding: .5em;
+            letter-spacing: 2px;
+            margin: 0 auto;
+        }
+        &_counter{
+            width: 40%;
+            border: 2px solid rgb(28,131,142);
+            border-radius: .4em;
+            &_title{
+                color: grey;
+            }
+            &_number{
+                font-weight: bold;
+            }
+        }
+
+        &_counters{
+            display: flex;
+            justify-content: space-around;
+            p{
+                text-align: center;
+            }
+            margin: 10px 0;
+        }
+        &_label{
+            width: 150px;
+            p{
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+h3, p{
+    margin: 10px;
+}
+
+@media only screen and (min-width:700px){
+    .dashboard{
+        &__text, &__graph{
+            margin: 10px auto;
+            max-width: 80%;
+        }
+    }
+}
+
+@media only screen and (min-width:1000px){
+    .dashboard{
+        &__text{
+            max-width: 60%;
+        }
+        &__graph{
+            max-width: 40%;
+        }
+    }
+}

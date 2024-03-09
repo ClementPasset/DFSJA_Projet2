@@ -1,0 +1,33 @@
+<h2 class="dashboard__title">Dashboard</h2>
+
+<section class="dashboard__text">
+    <h3>Welcome to the Olympic Games App</h3>
+    <p>This app is brought to you by TéléSport, and it will allow you to find a summary of the latest Olympic Games</p>
+    <p>On this dashboard, you can find the distribution of medals by coutry for all previous editions.</p>
+    <p>You can click directly on the graph to open the details of a specific country, to see in which year it has been
+        more efficient !</p>
+</section>
+<section class="dashboard__graph">
+    <h3 class="dashboard__graph_title">Medals per Country</h3>
+    <div class="dashboard__graph_counters">
+        <div class="dashboard__graph_counter">
+            <p class="dashboard__graph_counter_title">Number of JOs</p>
+            <p class="dashboard__graph_counter_number">10</p>
+        </div>
+        <div class="dashboard__graph_counter">
+            <p class="dashboard__graph_counter_title">Number of countries</p>
+            <p class="dashboard__graph_counter_number">10</p>
+        </div>
+    </div>
+    <div>
+        <ngx-charts-pie-chart *ngIf="graphData$ | async as graphData" [results]="graphData" [labels]="true"
+            [trimLabels]="false" (select)="onSelect($event)">
+            <ng-template #tooltipTemplate let-model="model">
+                <div class="dashboard__graph_label">
+                    <p>{{model.name}}</p>
+                    <p>🏅 {{model.value}}</p>
+                </div>
+            </ng-template>
+        </ngx-charts-pie-chart>
+    </div>
+</section>
